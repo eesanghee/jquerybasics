@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Fade In and Out </title>
+		<style>
+			div {
+				height: 100px;
+				width: 100px;
+				background-color: lavender;
+				text-align: center;
+				opacity: .5;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div> Click here! </div>
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+		//When mouse enters div, make opacity = 1.
+		$('div').mouseenter(function() {
+			$('div').fadeTo('fast',1)});
+		//When mouse leaves div, make opacity go back to .5
+		$('div').mouseleave(function() {
+			$('div').fadeTo('fast',.5)
+		});
+
+		</script>
+	</body>
+<html>
