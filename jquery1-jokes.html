@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Cheesy Math Jokes </title>
+	</head>
+
+	<body>
+		<p class = "question"> What did the complementary angle say to the isosceles triangle? </p>
+		<p class = "answer"> <span> Nice legs! </span> </p>
+		<p class = "question"> Why did the polynomial plant wilt?</p>
+		<p class = "answer"> <span> Its roots were imaginary! </span> </p>
+		<p class = "question"> Why did the relation need a tutor? </p>
+		<p class = "answer"> <span> It couldn't pass the vertical line test. </span> </p>				
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+		//1. Hide answers
+		$(".answer span").hide();
+		//2. Create a button to go over the answer
+		$(".answer").append("<button>Reveal Answer</button>");
+		//3. When button is clicked
+		$("button").click(function() {
+			//3.1 Show answer
+			$(this).prev().show();
+			//3.2 remove button
+			$(this).remove();
+		});
+//Question -> why do i need to include span on step 1? If i do not, the reveal button does not show for step 2.
+		</script>
+	</body>
+<html>
